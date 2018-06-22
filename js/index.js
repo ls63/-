@@ -76,8 +76,19 @@ $(function() {
     		$(".page4-txt").fadeIn("slow");
     	});
     })
+    //  音乐播放和停止
+    $(".musicBtn").click(function(){
+    	var music=$("#music")[0];//document.getElementById("#music")
+    	if(music.paused){
+    		music.play();
+    		$(this).attr("src","img/musicBtn.png")
+    	}else{
+    		music.pause();
+    		$(this).attr("src","img/musicBtnOff.png")
+    	}
+    })
 /*$(document).ready(function(){
 	
 })*/
-
+ 
 //等文档完成之后再执行js代码
